@@ -9,6 +9,7 @@ const Game = () => {
   const [board, setBoard] = useState(Array(9).fill(0));
   const [turn, setTurn] = useState(TURNS.X);
   const [gameState, setGameState] = useState('playing');
+  const [winner, setWinner] = useState(null);
 
   // Check for win or draw conditions using useEffect
   useEffect(() => {
@@ -21,23 +22,18 @@ const Game = () => {
         return;
       }
 
+      if (a === b && a === b && a === c) {
+        setGameState('game over');
+        setWinner(a);
+        return;
+      }
       if (
-        board.some((cell) => {
-          return cell === 0;
+        board.every((cell) => {
+          return cell !== 0;
         })
       ) {
-        if (a === b && a === b && a === c) {
-          setGameState('game over');
-          setTimeout(() => {
-            alert(`${a} wins!`);
-          }, 500);
-          return;
-        }
-      } else {
         setGameState('game over');
-        setTimeout(() => {
-          alert('Draw!');
-        }, 500);
+        setWinner('draw');
         return;
       }
     });
@@ -61,7 +57,10 @@ const Game = () => {
 
       <Turn turn={turn} />
 
-      <GameOver />
+      <GameOver
+        gameState={gameState}
+        winner={winner}
+      />
     </div>
   );
 };

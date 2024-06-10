@@ -9,9 +9,20 @@
   top: 0;
   left: 0;
   backdrop-filter: blur(15px);
+  transform: scale(0);
+  transition: background-color 150ms ease-out, backdrop-filter 150ms ease-out,
+}
+
+.gameOver.active {
+  transform: scale(1);
+
+  & > .card {
+    transform: scale(1);
+  }
 }
 
 .card {
+  transition: all 300ms ease-out;
   width: 300px;
   height: 300px;
   background-color: gray;
@@ -20,15 +31,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transform: scale(0);
 
-  & > .buttons { 
+  & > .buttons {
     display: flex;
     justify-content: center;
     gap: 1rem;
     align-items: center;
     transition: all 150ms ease-out;
 
-    & > button { 
+    & > button {
       background-color: darkgray;
 
       &:hover {
