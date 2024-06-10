@@ -1,0 +1,18 @@
+.game {
+  width: 650px;
+  height: 450px;
+  border-radius: 10px;
+  border: 2px solid #929292;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 18px;
+  width: 410px;
+  height: 410px;
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
