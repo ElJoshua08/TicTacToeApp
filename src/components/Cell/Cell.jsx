@@ -1,11 +1,11 @@
 import './Cell.css';
 import { TURNS } from '../../constants.js';
 
-const Cell = ({ cellID, board, setBoard, turn, setTurn }) => {
+const Cell = ({ cellID, board, setBoard, turn, setTurn, gameState }) => {
   const cellClick = () => {
     const cell = board[cellID];
 
-    if (cell === 0) {
+    if (cell === 0 && gameState === 'playing') {
       const newCell = turn;
 
       const newBoard = board.map((cell, index) => {

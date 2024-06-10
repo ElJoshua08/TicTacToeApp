@@ -1,7 +1,8 @@
 import './Game.css';
+import { TURNS, WIN_CONDITIONS } from '../../constants.js';
 import { useState, useEffect } from 'react';
 import { Cell } from '../Cell/Cell.jsx';
-import { TURNS, WIN_CONDITIONS } from '../../constants.js';
+import { Turn } from '../Turn/Turn.jsx';
 
 const Game = () => {
   const [board, setBoard] = useState(Array(9).fill(0));
@@ -15,17 +16,30 @@ const Game = () => {
       let b = board[condition[1]];
       let c = board[condition[2]];
 
-      if(a === 0 || b === 0 || c === 0) {
+      if (a === 0 || b === 0 || c === 0) {
         return;
       }
 
-      if (a === b && a === b && a === c) {
+      if (
+        board.some((cell) => {
+          return cell === 0;
+        })
+      ) {
+        if (a === b && a === b && a === c) {
+          setGameState('game over');
+          setTimeout(() => {
+            alert(`${a} wins!`);
+          }, 500);
+          return;
+        }
+      } else {
+        setGameState('game over');
         setTimeout(() => {
-          alert(`${a} wins!`);
+          alert('Draw!');
         }, 500);
+        return;
       }
-    })
-
+    });
   }, [board, turn]);
 
   return (
@@ -43,6 +57,8 @@ const Game = () => {
           />
         ))}
       </div>
+
+      <Turn turn={turn} />
     </div>
   );
 };
