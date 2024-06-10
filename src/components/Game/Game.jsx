@@ -3,6 +3,7 @@ import { TURNS, WIN_CONDITIONS } from '../../constants.js';
 import { useState, useEffect } from 'react';
 import { Cell } from '../Cell/Cell.jsx';
 import { Turn } from '../Turn/Turn.jsx';
+import { GameOver } from '../GameOver/GameOver.jsx';
 
 const Game = () => {
   const [board, setBoard] = useState(Array(9).fill(0));
@@ -59,6 +60,8 @@ const Game = () => {
       </div>
 
       <Turn turn={turn} />
+
+      <GameOver />
     </div>
   );
 };
