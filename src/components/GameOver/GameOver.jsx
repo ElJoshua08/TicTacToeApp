@@ -1,6 +1,6 @@
 import './GameOver.css';
 
-const GameOver = ({ winner, gameState }) => {
+const GameOver = ({ winner, gameState, restartGame }) => {
   return (
     <div className={`gameOver ${gameState !== 'playing' ? 'active' : ''}`}>
       <div className="card">
@@ -8,7 +8,7 @@ const GameOver = ({ winner, gameState }) => {
         <p>{winner} Won the game!</p>
 
         <div className="buttons">
-          <button>Play Again</button>
+          <button onClick={restartGame}>Play Again</button>
           <button>Quit</button>
         </div>
       </div>

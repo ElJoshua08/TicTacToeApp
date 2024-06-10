@@ -39,6 +39,13 @@ const Game = () => {
     });
   }, [board, turn]);
 
+  const restartGame = () => {
+    setBoard(Array(9).fill(0));
+    setTurn(TURNS.X);
+    setGameState('playing');
+    setWinner(null);
+  };
+
   return (
     <div className="game">
       <div className="board">
@@ -60,6 +67,7 @@ const Game = () => {
       <GameOver
         gameState={gameState}
         winner={winner}
+        restartGame={restartGame}
       />
     </div>
   );
