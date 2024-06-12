@@ -49,15 +49,16 @@
     &.x {
       &::first-letter {
         color: var(--color-x);
+        font-size: 3rem;
+        font-weight: bold;
       }
     }
-    &::first-letter {
-      font-size: 3rem;
-      font-weight: bold;
-    }
+
     &.o {
       &::first-letter {
         color: var(--color-o);
+        font-size: 3rem;
+        font-weight: bold;
       }
     }
   }

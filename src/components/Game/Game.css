@@ -16,5 +16,6 @@
   grid-gap: 8px;
   width: 70vw;
   height: auto;
+  flex-grow: 0;
   aspect-ratio: 1 / 1;
 }
