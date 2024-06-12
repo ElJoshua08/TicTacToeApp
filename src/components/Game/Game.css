@@ -1,7 +1,7 @@
 .game {
   width: 650px;
   height: 450px;
-  border-radius: 10px;
+  border-radius: 30px;
   border: 2px solid #929292;
   display: flex;
   justify-content: space-between;

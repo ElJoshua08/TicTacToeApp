@@ -13,6 +13,19 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* *Color Themes */
+  --color-primary: #fff;
+  --color-secondary: #fff;
+  --color-tertiary: #fff;
+  --color-x: #ffc10d;
+  --color-o: #56ace0;
+
+  --color-cell-border-lighter: #e4e4e4;
+  --color-cell-border: #999;
+
+  --color-cell-background-lighter: #666;
+  --color-cell-background: #333;
 }
 
 a {

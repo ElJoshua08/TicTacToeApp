@@ -12,14 +12,14 @@
 
   .turnValue {
     font-size: 100px;
-    font-weight: bold;
+    font-weight: 900;
 
     &.x {
-      color: yellow;
+      color: var(--color-x);
     }
 
     &.o {
-      color: cyan;
+      color: var(--color-o);
     }
   }
 }

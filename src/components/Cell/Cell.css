@@ -2,27 +2,34 @@
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  border: 2px solid #fff;
+  border: 2px solid var(--color-cell-border);
+  background-color: var(--color-cell-background);
   cursor: pointer;
 
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 150ms ease-out;
+  font-weight: 900;
+
+  &:not(.x):not(.o):hover {
+    background-color: var(--color-cell-background-lighter);
+    border-color: var(--color-cell-border-lighter);
+  }
 
   &.x,
   &.o {
-    border: 2px solid #999;
-    background-color: #333;
+    border: 2px solid var(--color-cell-border);
+    background-color: var(--color-cell-background);
     font-size: 80px;
     cursor: default;
   }
 
   &.x {
-    color: yellow;
+    color: var(--color-x);
   }
 
   &.o {
-    color: cyan;
+    color: var(--color-o);
   }
 }
