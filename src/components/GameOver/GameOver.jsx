@@ -5,7 +5,9 @@ const GameOver = ({ winner, gameState, restartGame }) => {
     <div className={`gameOver ${gameState !== 'playing' ? 'active' : ''}`}>
       <div className="card">
         <h1>Game Over</h1>
-        <p className={`${winner && winner.toLowerCase()}`}>{winner} Won the game!</p>
+        <p className={`${winner && winner.toLowerCase()}`}>
+          {winner ? `${winner} won the game!` : 'It\'s a draw!'}
+        </p>
 
         <div className="buttons">
           <button onClick={restartGame}>Play Again</button>
