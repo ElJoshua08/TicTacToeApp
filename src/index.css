@@ -17,7 +17,9 @@
   /* *Color Themes */
   --color-primary: #ffdb00;
   --color-secondary: #ff8f00;
+  --color-secondary-darker: #ff4f00;
   --color-tertiary: #b83b5e;
+  --color-tertiary-darker: #7b2a48;
   --color-x: #ffc10d;
   --color-o: #56ace0;
 
@@ -26,6 +28,8 @@
 
   --color-cell-background-lighter: #666;
   --color-cell-background: #333;
+
+  user-select: none;
 }
 
 html {
