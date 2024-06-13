@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './GameOver.css';
 
 const GameOver = ({ winner, gameState, restartGame }) => {
@@ -12,6 +13,7 @@ const GameOver = ({ winner, gameState, restartGame }) => {
         <div className="buttons">
           <button onClick={restartGame}>Play Again</button>
           {/* <button>Quit</button> */}
+          <button><Link className='homeLink' to="/">Home</Link></button>
         </div>
       </div>
     </div>
