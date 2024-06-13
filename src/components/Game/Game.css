@@ -24,7 +24,7 @@
 @media screen and (min-width: 570px) {
   .game {
     flex-direction: row;
-    gap: 6rem;
+    gap: 10rem;
   }
 
   .board {

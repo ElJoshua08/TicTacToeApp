@@ -4,7 +4,7 @@ import { Game } from '../../components/Game/Game.jsx';
 const GameView = () => {
   return (
     <>
-      <Game />;
+      <Game />
       <Author
         authorName="Joshua"
         authorLink="https://github.com/ElJoshua08"
