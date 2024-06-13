@@ -13,7 +13,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  grid-gap: 8px;
+  gap: 8px;
   width: 70vw;
   max-width: 470px;
   height: auto;
@@ -25,6 +25,10 @@
   .game {
     flex-direction: row;
     gap: 6rem;
+  }
+
+  .board {
+    gap: 16px;
   }
 }
 

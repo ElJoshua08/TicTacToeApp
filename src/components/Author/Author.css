@@ -1,0 +1,21 @@
+.author {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  margin-right: 0.5rem;
+  align-items: center;
+  font-size: 1.6rem;
+  height: min-content;
+
+  strong {
+    color: var(--color-tertiary);
+    font-weight: bolder;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--color-secondary);
+    font-weight: bolder;
+  }
+}
