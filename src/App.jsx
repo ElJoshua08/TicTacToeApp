@@ -1,10 +1,23 @@
 import './App.css';
-import { Game } from './components/Game/Game.jsx';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { MenuView } from './views/MenuView/MenuView.jsx';
+import { GameView } from './views/GameView/GameView.jsx';
 
 function App() {
   return (
     <>
-      <Game />
+      <Router>
+        <Routes>
+          <Route
+            path="/"
+            element={<MenuView />}
+          />
+          <Route
+            path="/game"
+            element={<GameView />}
+          />
+        </Routes>
+      </Router>
     </>
   );
 }
