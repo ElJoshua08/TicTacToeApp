@@ -15,7 +15,16 @@
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 8px;
   width: 70vw;
+  max-width: 470px;
   height: auto;
   flex-grow: 0;
   aspect-ratio: 1 / 1;
 }
+
+@media screen and (min-width: 570px) {
+  .game {
+    flex-direction: row;
+    gap: 6rem;
+  }
+}
+

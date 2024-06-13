@@ -22,7 +22,7 @@
   &.o {
     border: 2px solid var(--color-cell-border);
     background-color: var(--color-cell-background);
-    font-size: 80px;
+    font-size: 8rem;
     cursor: default;
   }
 
